@@ -17,6 +17,12 @@ python3 hello.py
 
 print('hello, world!')
 # print("你好,世界！")
+# "" and '' is the same.
 print('你好', '世界')
+
+# sep: string inserted between values, default a space. end: string appended after the last value, default a newline.
 print('hello', 'world', sep=', ', end='!')
+# default end is a new line, but here it is altered to be a '!', so the next line is immediately after this print line.
 print('goodbye, world', end='!\n')
+
+print('1', '2', '3', sep='.', end='?')
