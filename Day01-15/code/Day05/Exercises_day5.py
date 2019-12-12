@@ -24,34 +24,70 @@
 #             print('公鸡: %d只, 母鸡: %d只, 小鸡: %d只' % (x, y, z))
 
 # 3. Craps gambling: we only play 1 round here.
-import random
-dice1 = random.randrange(1, 7)
-print(dice1)
-dice2 = random.randrange(1, 7)
-print(dice2)
-first_roll = dice1 + dice2
-print(first_roll)
-print()
+# import random
+# dice1 = random.randrange(1, 7)
+# print(dice1)
+# dice2 = random.randrange(1, 7)
+# print(dice2)
+# first_roll = dice1 + dice2
+# print(first_roll)
+# print()
+#
+# if first_roll == 7 or first_roll == 1:
+#     print('Player wins.')
+#
+# elif first_roll == 2 or first_roll == 3 or first_roll == 12:
+#     print('Banker wins.')
+#
+# else:
+#     print("Continue: ")
+#     print()
+#     next_roll = 0
+#     while next_roll != 7 and next_roll != first_roll :
+#         dice1 = random.randint(1, 7)
+#         print(dice1)
+#         dice2 = random.randint(1, 7)
+#         print(dice2)
+#         next_roll = dice1 + dice2
+#         print(next_roll)
+#         print()
+#         if next_roll == 7:
+#             print('Banker wins.')
+#         elif next_roll == first_roll:
+#             print('Player wins.')
 
-if first_roll == 7 or first_roll == 1:
-    print('Player wins.')
+# 4. Fibonacci: the key is (a, b = b, a + b), this will make the iteration much simpler and straightforward.
+# first = 1
+# second = 1
+# print(first, end=' ')
+# print(second, end=' ')
+#
+# for i in range(3, 21):
+#     print(first + second, end=' ')
+#     intermediate = first
+#     first = second
+#     second += intermediate
 
-elif first_roll == 2 or first_roll == 3 or first_roll == 12:
-    print('Banker wins.')
+# 5. Perfect number
+# import math
+# for i in range(1, 10001):  # the target number range
+#     sum = 1
+#     inter = int(math.sqrt(i))
+#     for j in range(2, inter + 1):  # checking each possible divisor
+#         if i % j == 0:
+#             sum += j
+#             sum += (i // j)
+#     if i == 1:
+#         print(i)
+#     elif sum == i:
+#         print(i)
 
-else:
-    print("Continue: ")
-    print()
-    next_roll = 0
-    while next_roll != 7 and next_roll != first_roll :
-        dice1 = random.randint(1, 7)
-        print(dice1)
-        dice2 = random.randint(1, 7)
-        print(dice2)
-        next_roll = dice1 + dice2
-        print(next_roll)
-        print()
-        if next_roll == 7:
-            print('Banker wins.')
-        elif next_roll == first_roll:
-            print('Player wins.')
+# 6. Prime numbers under 100
+for p in range(2, 101):
+    status = True
+    for trial_factor in range(2, p):
+        if p % trial_factor == 0:
+            status = False
+            break
+    if status:
+        print(p, end=' ')
