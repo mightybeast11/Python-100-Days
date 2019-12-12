@@ -57,16 +57,16 @@
 #             print('Player wins.')
 
 # 4. Fibonacci: the key is (a, b = b, a + b), this will make the iteration much simpler and straightforward.
-# first = 1
-# second = 1
-# print(first, end=' ')
-# print(second, end=' ')
-#
-# for i in range(3, 21):
-#     print(first + second, end=' ')
-#     intermediate = first
-#     first = second
-#     second += intermediate
+first = 1
+second = 1
+print(first, end=' ')
+print(second, end=' ')
+
+for _ in range(3, 21):
+    print(first + second, end=' ')
+    intermediate = first
+    first = second
+    second += intermediate
 
 # 5. Perfect number
 # import math
@@ -83,11 +83,11 @@
 #         print(i)
 
 # 6. Prime numbers under 100
-for p in range(2, 101):
-    status = True
-    for trial_factor in range(2, p):
-        if p % trial_factor == 0:
-            status = False
-            break
-    if status:
-        print(p, end=' ')
+# for p in range(2, 101):
+#     status = True
+#     for trial_factor in range(2, p):
+#         if p % trial_factor == 0:
+#             status = False
+#             break
+#     if status:
+#         print(p, end=' ')
