@@ -33,7 +33,7 @@
 # print(first_roll)
 # print()
 #
-# if first_roll == 7 or first_roll == 1:
+# if first_roll == 7 or first_roll == 11:
 #     print('Player wins.')
 #
 # elif first_roll == 2 or first_roll == 3 or first_roll == 12:
