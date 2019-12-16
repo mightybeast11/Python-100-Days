@@ -25,7 +25,7 @@ def main():
             else:
                 yh[row][col] = yh[row - 1][col] + yh[row - 1][col - 1]
             print(yh[row][col], end='\t')
-        print()
+        print()  # 换行
 
 
 if __name__ == '__main__':
