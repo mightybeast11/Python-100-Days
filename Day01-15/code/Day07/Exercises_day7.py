@@ -60,4 +60,8 @@ if __name__ == '__main__':
     print(max2(l1))
     # l2 = (x for x in range(100))   # generator can only be used for iteration so far.
 
-
+# enumerate: iterate the index and content simultaneously.
+    l3 = [x for x in range(10)]
+    for index, elem in enumerate(l3):
+        if index % 2 == 0:
+            print(elem, end=" ")
