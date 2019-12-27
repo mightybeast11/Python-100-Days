@@ -1,5 +1,9 @@
 from time import time, localtime, sleep
 
+# A class method is a method which is bound to the class and not the object of the class.
+# They have the access to the state of the class as it takes a class parameter that points to the class and not the object instance.
+# It can modify a class state that would apply across all the instances of the class.
+#     For example it can modify a class variable that will be applicable to all the instances.
 
 class Clock(object):
     """数字时钟"""
@@ -9,6 +13,7 @@ class Clock(object):
         self._minute = minute
         self._second = second
 
+    # 类方法
     @classmethod
     def now(cls):
         ctime = localtime(time())

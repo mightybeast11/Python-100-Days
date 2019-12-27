@@ -8,6 +8,9 @@ Date: 2018-03-12
 
 from math import sqrt
 
+# A static method is also a method which is bound to the class and not the object of the class.
+# A static method can’t access or modify class state.
+# It is present in a class because it makes sense for the method to be present in class.
 
 class Triangle(object):
 
