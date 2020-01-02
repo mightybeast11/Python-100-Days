@@ -14,7 +14,7 @@ from abc import ABCMeta, abstractmethod
 from math import pi
 
 
-class Shape(object, metaclass=ABCMeta):
+class Shape(metaclass=ABCMeta):
 
     @abstractmethod
     def perimeter(self):

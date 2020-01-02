@@ -6,6 +6,8 @@ Author: 骆昊
 Date: 2018-03-12
 """
 
+# class Line is associated with class Point, but they are not subclass or superclass.
+
 from math import sqrt
 
 

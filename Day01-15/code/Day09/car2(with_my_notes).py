@@ -11,8 +11,8 @@ Date: 2018-03-12
 class Car(object):
 
     def __init__(self, brand, max_speed):
-        self.set_brand(brand)
-        self.set_max_speed(max_speed)
+        self.set_brand(brand)  # changed
+        self.set_max_speed(max_speed)  # changed
 
     def get_brand(self):
         return self._brand
@@ -46,3 +46,10 @@ print(car)
 print(Car.brand)
 print(Car.brand.fget)
 print(Car.brand.fset)
+
+# My notes:
+# Use class_name.property_name.fget/fset(instance_name) to access/change the property.
+print(Car.brand.fget(car))
+Car.brand.fset(car, 'Tesla')
+Car.max_speed.fset(car, 123)
+print(car)

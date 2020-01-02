@@ -59,11 +59,11 @@ class Student(object):
         else:
             print('%s正在观看岛国爱情动作片.' % self._name)
 
-    # 重载大于(>)运算符
+    # override大于(>)运算符
     def __gt__(self, other):
         return self._age > other._age
 
-    # 重载小于(<)运算符
+    # override小于(<)运算符
     def __lt__(self, other):
         return self._age < other._age
 

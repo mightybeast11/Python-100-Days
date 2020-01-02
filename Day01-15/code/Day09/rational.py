@@ -12,21 +12,22 @@ from math import gcd
 class Rational(object):
 
     def __init__(self, num, den=1):
-        if den == 0:
+        if den == 0:  # make sure (denominator != 0).
             raise ValueError('分母不能为0')
         self._num = num
         self._den = den
         self.normalize()
 
     def simplify(self):
-        x = abs(self._num)
-        y = abs(self._den)
+        x = abs(self._num)  # strictly positive intermediate to calculate gcd.
+        y = abs(self._den)  # strictly positive intermediate to calculate gcd.
         factor = gcd(x, y)
         if factor > 1:
-            self._num //= factor
+            self._num //= factor  # //= rather than /= since we want output as an integer.
             self._den //= factor
         return self
 
+    # make sure (denominator > 0).
     def normalize(self):
         if self._den < 0:
             self._den = -self._den

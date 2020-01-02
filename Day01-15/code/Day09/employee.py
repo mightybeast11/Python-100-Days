@@ -14,7 +14,7 @@ Date: 2018-03-12
 from abc import ABCMeta, abstractmethod
 
 
-class Employee(object, metaclass=ABCMeta):
+class Employee(metaclass=ABCMeta):
 
     def __init__(self, name):
         self._name = name
@@ -66,10 +66,10 @@ class Salesman(Employee):
 if __name__ == '__main__':
     emps = [Manager('武则天'), Programmer('狄仁杰'), Salesman('白元芳')]
     for emp in emps:
-        if isinstance(emp, Programmer):
-            working_hour = int(input('请输入%s本月工作时间: ' % emp.name))
+        if isinstance(emp, Programmer):  # emp is an instance of Programmer class.
+            working_hour = int(input(f'请输入{emp.name}本月工作时间: '))
             emp.set_working_hour(working_hour)
-        elif isinstance(emp, Salesman):
-            sales = float(input('请输入%s本月销售额: ' % emp.name))
+        elif isinstance(emp, Salesman):  # emp is an instance of Salesman class.
+            sales = float(input(f'请输入{emp.name}本月销售额: '))
             emp.set_sales(sales)
-        print('%s本月月薪为: ￥%.2f元' % (emp.name, emp.get_salary()))
+        print(f'{emp.name}本月月薪为: ￥{emp.get_salary()}元')
