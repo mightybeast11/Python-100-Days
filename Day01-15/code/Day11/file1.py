@@ -14,11 +14,14 @@ def main():
     with open('致橡树.txt', 'r', encoding='utf-8') as f:
         print(f.read())
 
+    print()  # separate the 2 copies
+
     # 通过for-in循环逐行读取
     with open('致橡树.txt', mode='r') as f:
         for line in f:
             print(line, end='')
-            time.sleep(0.5)
+            time.sleep(0.1)
+            print()  # insert行距
     print()
 
     # 读取文件按行读取到列表中
