@@ -7,14 +7,14 @@ Date: 2018-03-13
 """
 import base64
 
-with open('mm.jpg', 'rb') as f:
+with open('mm.jpg', 'rb') as f:  # read bytes
     data = f.read()
-    # print(type(data))
-    # print(data)
+    print(type(data))
+    print(data)
     print('字节数:', len(data))
     # 将图片处理成BASE-64编码
     print(base64.b64encode(data))
 
-with open('girl.jpg', 'wb') as f:
+with open('girl.jpg', 'wb') as f:  # write bytes
     f.write(data)
 print('写入完成!')

@@ -12,7 +12,9 @@ filename = 'example.csv'
 
 try:
     with open(filename) as f:
+        # create a reader object, which contains a list of lists of strings
         reader = csv.reader(f)
+        # convert the reader to a real list (of lists of strings)
         data = list(reader)
 except FileNotFoundError:
     print('无法打开文件:', filename)
